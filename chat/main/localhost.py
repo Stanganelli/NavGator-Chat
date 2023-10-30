@@ -8,7 +8,8 @@ a = "test.html"
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
 
-print("mande para seu amigos se conectar em: http://",ip_address,":8080")
+print("mande para seu amigos se conectar em: http://" + ip_address + ":8080")
+
 
 class Servidor(BaseHTTPRequestHandler):
     def do_GET(self):
