@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <center>
+  <h1>Cadastro</h1>
+      Seu Nome: <input type="text" name="user_name" id="user_name"><br>
+      <button onclick="recaminhe()">Cadastro e vá para o chat</button>
+  </form>
+</center>
+</body>
+</html>
+<script>
+function recaminhe() {
+  var nome = document.querySelector('input[name="user_name"]').value;
+  sessionStorage.setItem("nome", nome);
+  window.location = "chat.html";
+}
+</script>

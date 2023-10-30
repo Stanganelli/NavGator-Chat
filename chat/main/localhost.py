@@ -3,7 +3,7 @@ import os
 from urllib.parse import parse_qs
 import socket
 
-a = "test.html"
+a = "index.html"
 
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
