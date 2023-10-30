@@ -54,13 +54,17 @@ class Servidor(BaseHTTPRequestHandler):
 
         post_params = parse_qs(post_data)
         user_name = post_params.get('user_name', [''])[0]
+        mensagem = post_params.get('mensagem', [''])[0]
+
+        #oque fazer com as var ? boa pergunta
 
         print(f"User Name: {user_name}")
+        print(f"Mensagem: {mensagem}")
 
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        response = f"Você enviou: {user_name}"
+        response = f"Você enviou: {user_name} - Mensagem: {mensagem}"
         self.wfile.write(response.encode('utf-8'))
 
 if __name__ == '__main__':
