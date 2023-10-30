@@ -1,4 +1,6 @@
-
+#pelo visto vamo passar parametro por aqui
+file_html = open("chat.html", "w")
+file_html.write('''
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +19,6 @@
 </head>
 
 <body>
-pintao
     <center>
     <div id="chat"></div>
     <span type="text" id="nomeDiv" placeholder="Seu nome"></span>
@@ -34,3 +35,5 @@ pintao
 </script>
 
 </html>
+''')
+file_html.close()
