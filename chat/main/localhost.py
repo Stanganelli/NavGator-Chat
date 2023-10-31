@@ -67,8 +67,8 @@ class Servidor(BaseHTTPRequestHandler):
         response = f"Você enviou: {user_name} - Mensagem: {mensagem}"
         self.wfile.write(response.encode('utf-8'))
 
-if __name__ == '__main__':
+
    # print("Insira o nome do arquivo e a extensão dele (por exemplo, arquivo.zip):")
    # a = input()
-    httpd = HTTPServer(('0.0.0.0', 8080), Servidor)
-    httpd.serve_forever()
+httpd = HTTPServer(('0.0.0.0', 8080), Servidor)
+httpd.serve_forever()
