@@ -2,6 +2,15 @@ function load() {
     var nome = sessionStorage.getItem("nome")
     nomeDiv.innerHTML = `${nome}`
 }
+ function updateChat() {
+        fetch('/chat.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('chat').innerHTML = data;
+            });
+    }
+
+    
 
 function post() {
     var mensagem = document.getElementById("mensagem").value;
