@@ -29,8 +29,9 @@ file_html.write('''
 
 <script>
     nome = ""
+    
     load()
-
+    setInterval(updateChat, 1000);
     
 </script>
 
