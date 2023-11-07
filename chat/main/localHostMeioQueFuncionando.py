@@ -4,7 +4,7 @@ import socket
 import os
 
 a = "chat.html"  # Nome do arquivo HTML que será usado para o chat
-
+b = "index.html"
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
 
@@ -13,7 +13,7 @@ print("Envie para seus amigos se conectarem em: http://" + ip_address + ":8080")
 class Servidor(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
-            self.path = '/{}'.format(a)
+            self.path = '/{}'.format(b)
 
         if self.path.endswith('.html'):
             content_type = 'text/html'
